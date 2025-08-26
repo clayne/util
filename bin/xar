@@ -114,7 +114,7 @@ def main(argv):
         ok = True
 
         with concurrent.futures.ProcessPoolExecutor(max_workers=args.parallel) as executor:
-            futures = [executor.submit(execute_command, cmd, args.verbose) for cmd in commands]
+            futures = [executor.submit(execute_command, cmd, args.verbose, args.noaction) for cmd in commands]
 
             for future in concurrent.futures.as_completed(futures):
                 success = future.result()

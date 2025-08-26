@@ -1,2 +1,2 @@
-#!/usr/bin/env perl -i -lp
+#!/usr/bin/perl -i -lp
 s/\s+$//;
